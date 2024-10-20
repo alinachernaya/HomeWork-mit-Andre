@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //перетворення
+        /*let a = 1;
+        let result;
+        result = Number(a); //значення в "а" перетвориться в число
+        result = String(a);//значення в "а" перетвориться в строку
+        result = Boolean(a);//значення в "а" перетвориться в true або  false*/
+
+
+      //ЗАВДАННЯ 1   ЗРОБИТИ КАЛЬКУЛЯТОР НА ДОДАВАННЯ 
+        let userAnswer1 = prompt("Введіть перше значення");//користувач вводить перше значення
+        let userAnswer2 = prompt("Введіть друге значення");// користувач вводить друге значення
+        let x = Number(userAnswer1);// перетворюємо перше значення від строкового в число
+        let y = Number(userAnswer2);//перетворюємо друге значення від строкового в число
+        let result = x + y;
+        alert(result);
+
+
+      //ЗАВДАННЯ 2   РОЗРАХУВАТИ ОБ'ЄМ ЦИЛІНДРУ ПО ФОРМУЛІ: ПІ * КВАДРАТ РАДІУСУ * НА ВИСОТУ
+        let radius = prompt("Введіть радіус у сантиметрах");
+        let height = prompt("Введіть висоту у сантиметрах");
+        let result2 = Math.PI * radius * radius * height;
+        alert(`Об'єм циліндру з висотою ${height} та радіусом ${radius} дорівнює ${result2}`);
+        
+
+
+      
+      
+
+
+
+    </script>
+
+    
+</body>
+</html>
+
