@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  У JS є 3 логічні оператори :
+            ! - не -- заперечення
+            && - кон'юнкція - "і", якщо декілька значень, то true буде тільки тоді, коли всі значення співпадають
+            || - диз'юнкція - "або", якщо декілька значень, то true буде тоді, коли хоча б одне значення буде вірним 
+
+        */
+
+        //приклад використання кон'юнкції: дуже цікава вправа)
+
+        let login = "admin";
+        let password = "12345";
+
+        let userAnswerLogin = prompt("Введіть Ваш логін");
+        let userAnswerPassword = prompt("Введіть Ваш пароль");
+
+        if (login == userAnswerLogin && password == userAnswerPassword) {
+            alert("Ви ввели правильний логін та пароль");
+        }
+        else {
+            alert("Ви ввели неправильний пароль");
+        }
+
+        // ЗАДАЧА: клієнту надається знижка 10%, якщо у нього розмір покупки більше, ніж 900 грн або якщо йому сьогодні ДН
+
+        //крок 1. спочатку створюємо змінні з товаром
+        let product1 = "Ручка гелева";
+        let product2 = "Олівець простий";
+        let product3 = "Лінійка";
+
+        //крок 2. Створюємо змінні з ціною
+        let price1 = 2;
+        let price2 = 3;
+        let price3 = 5;
+
+        // крок 3. Запрашуємо у користувача кількість товару
+        let productVieViele1 = +prompt(`Укажіть кількість товару: "${product1}" ціна:  ${price1} грн. `);//додаємо"+", щоб перетворити в число
+        let productVieViele2 = +prompt(`Укажіть кількість товару:"${product2}" ціна: ${price2} грн. `);
+        let productVieViele3 = +prompt(`Укажіть кількість товару:"${product3}" ціна: ${price3} грн. `);
+
+        //Крок 4. Використовуючи "+=" додаємо показники з productVieViele
+        let totalPrice = 0;
+        totalPrice += productVieViele1 * price1;//кількість товару множимо на ціну та додоємо до totalPrice
+        totalPrice += productVieViele2 * price2;
+        totalPrice += productVieViele3 * price3;
+
+        //alert(`Загальна сума: ${totalPrice} грн.`);
+
+
+        let sum = 900;
+        let birthdayClient = true;
+        if (totalPrice > 900 || birthdayClient == true) {
+            let userPrice = totalPrice * 0.1;
+            let totalSum = totalPrice - userPrice;
+            alert(`Вітаємо: ми даруємо Вам знижку 10%. До сплати: ${totalSum}`);
+        }
+        else {
+            alert(`Загальна сума: ${totalPrice} грн.`);
+        }
+
+    </script>
+</body>
+
+</html>

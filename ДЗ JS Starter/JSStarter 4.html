@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-    /*  //Запам'ятати: інкримент/декримент
-        value ++//value +1
-        value --//value -1
-        //--------------------------------
-        let value = 5;
-        value += 10; // 5+10
-        value -= 1;// 5-1
-        value *= 6;// 5*6
-        value /= 5;// 5/5
-        //--------------------------------
-    */
-    //ЗАВДАННЯ: РОЗРАХУВАТИ загальну суму покупки
-    //крок 1. спочатку створюємо змінні з товаром
-    let product1 = "Ручка гелева";
-    let product2 = "Олівець простий";
-    let product3 = "Лінійка";
+        /*  //Запам'ятати: інкримент/декримент
+            value ++//value +1
+            value --//value -1
+            //--------------------------------
+            let value = 5;
+            value += 10; // 5+10
+            value -= 1;// 5-1
+            value *= 6;// 5*6
+            value /= 5;// 5/5
+            //--------------------------------
+        */
+        //ЗАВДАННЯ: РОЗРАХУВАТИ загальну суму покупки
+        //крок 1. спочатку створюємо змінні з товаром
+        let product1 = "Ручка гелева";
+        let product2 = "Олівець простий";
+        let product3 = "Лінійка";
 
-    //крок 2. Створюємо змінні з ціною
-    let price1 = 2  ;
-    let price2 = 3 ;
-    let price3 = 5 ;
-     
-    // крок 3. Запрашуємо у користувача кількість товару
-    let productVieViele1 = +prompt(`Укажіть кількість товару: "${product1}" ціна:  ${price1} грн. `);//додаємо"+", щоб перетворити в число
-    let productVieViele2 = +prompt(`Укажіть кількість товару:"${product2}" ціна: ${price2} грн. `);
-    let productVieViele3 = +prompt(`Укажіть кількість товару:"${product3}" ціна: ${price3} грн. `);
+        //крок 2. Створюємо змінні з ціною
+        let price1 = 2;
+        let price2 = 3;
+        let price3 = 5;
 
-    //Крок 4. Використовуючи "+=" додаємо показники з productVieViele
-    let totalPrice = 0;
-    totalPrice += productVieViele1 * price1;//кількість товару множимо на ціну та додоємо до totalPrice
-    totalPrice += productVieViele2 * price2;
-    totalPrice += productVieViele3* price3;
+        // крок 3. Запрашуємо у користувача кількість товару
+        let productVieViele1 = +prompt(`Укажіть кількість товару: "${product1}" ціна:  ${price1} грн. `);//додаємо"+", щоб перетворити в число
+        let productVieViele2 = +prompt(`Укажіть кількість товару:"${product2}" ціна: ${price2} грн. `);
+        let productVieViele3 = +prompt(`Укажіть кількість товару:"${product3}" ціна: ${price3} грн. `);
 
-    alert(`Загальна сума: ${totalPrice} грн.`);
+        //Крок 4. Використовуючи "+=" додаємо показники з productVieViele
+        let totalPrice = 0;
+        totalPrice += productVieViele1 * price1;//кількість товару множимо на ціну та додоємо до totalPrice
+        totalPrice += productVieViele2 * price2;
+        totalPrice += productVieViele3 * price3;
+
+        alert(`Загальна сума: ${totalPrice} грн.`);
 
     </script>
 </body>
+
 </html>
