@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+
+<body>
+    <script>
+        //  Switch - оператор багатозначного вибору. Використовується для порівняння значення на равенство з різними варіантами 
+        //  Default - блок, який виконається, якщо не підійшло жодне значення case
+
+        //  Приклад 1: 
+        let userAnswer = prompt("Введіть порядковий номер дня тижня");
+        
+        switch (userAnswer) {
+            case "1":
+                alert("Понеділок");
+                break;
+
+            case "2":
+                alert("Вівторок");
+                break;
+
+            case "3":
+                alert("Середа");
+                break;
+
+            default:
+                alert("Ви ввели невірне значення");
+                break;
+        }
+
+        //Приклад 2:
+        //Треба з'ясувати яку доставку бажає клієнт
+
+ 
+         // ЗАДАЧА: клієнту надається безкоштовна доставка, якщо у нього розмір покупки більше, ніж 900 грн або якщо йому сьогодні ДН
+ 
+         //крок 1. спочатку створюємо змінні з товаром
+         let product1 = "Ручка гелева";
+         let product2 = "Олівець простий";
+         let product3 = "Лінійка";
+ 
+         //крок 2. Створюємо змінні з ціною
+         let price1 = 2;
+         let price2 = 3;
+         let price3 = 5;
+ 
+         // крок 3. Запрашуємо у користувача кількість товару
+         let productVieViele1 = +prompt(`Укажіть кількість товару: "${product1}" ціна:  ${price1} грн. `);//додаємо"+", щоб перетворити в число
+         let productVieViele2 = +prompt(`Укажіть кількість товару:"${product2}" ціна: ${price2} грн. `);
+         let productVieViele3 = +prompt(`Укажіть кількість товару:"${product3}" ціна: ${price3} грн. `);
+ 
+         //Крок 4. Використовуючи "+=" додаємо показники з productVieViele
+         let totalPrice = 0;
+         totalPrice += productVieViele1 * price1;//кількість товару множимо на ціну та додоємо до totalPrice
+         totalPrice += productVieViele2 * price2;
+         totalPrice += productVieViele3 * price3;
+
+         //Крок 5 
+         let shippingPrice = 0;//вартість доставки
+         let shippingType = prompt("Оберіть варіант доставки: \r\n 1 - Кур'єр \r\n 2 - Доставка Новою Поштою \r\n 3 - Доставка Укрпоштою ");
+         //Вище запитуємо у користувача, який спосіб доставки він обирає
+         switch(shippingType){
+            case "1":
+                shippingPrice = 30;
+                shippingMessage = "Обрана доставка кур'єром";
+                break;
+            case "2":
+                shippingPrice = 50;
+                shippingMessage = "Обрана доставка Новою Поштою";
+                break;
+            case "3":
+                shippingPrice = 50;
+                shippingMessage = "Обрана доставка Укрпоштою";
+                break;
+            default:
+                shippingPrice = 30;
+                shippingMessage = "Обрана доставка кур'єром";
+                break;
+         }
+
+         //Крок 6. Розраховуємо чи буде доставка безкоштовною
+ 
+         //let sum = 900;
+         let birthdayClient = true;
+         if (totalPrice > 900 || birthdayClient == true) {
+             shippingPrice = 0;
+             shippingMessage =  "Доставка за наш рахунок";
+         }
+         else {
+            shippingMessage += `\r\n Вартість доставки: ${shippingPrice} \r\n  Доставка від 900 грн. за наш рахунок`;
+             
+         }
+         alert(`Загальна сума: ${totalPrice}.\r\n${shippingMessage}, дякуємо за покупку!`);
+
+    </script>
+</body>
+
+</html>
