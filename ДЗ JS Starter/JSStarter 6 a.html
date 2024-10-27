@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+
+<body>
+    <script>
+       //Завдання 1: 
+
+        /*Напишіть код з використанням if..else , що відповідає наступній конструкції
+switch 
+
+        switch (browser) {
+            case 'Edge':
+                alert("You've got the Edge!");
+                break;
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Ми підтримуємо і ці браузери');
+                break;
+            default:
+                alert('Маємо надію, що ця сторінка виглядає добре!');
+        }
+ */
+
+
+
+       //Виконання: 
+   
+       
+       let choiceUser = prompt("Для доступу введіть браузер");
+       let choice1 = ("Firefox");
+       let choice2 = ("Opera");
+       let choice3 = ("Chrome");
+       let choice4 = ("Edge");
+       let choice5 = ("Safari");
+
+       if (choiceUser === choice1){
+           alert("Ми підтримуємо і ці браузери");
+       }
+        else if(choiceUser === choice2){
+           alert("Ми підтримуємо і ці браузери");
+       }
+       else if(choiceUser === choice3){
+           alert("Ми підтримуємо і ці браузери");
+       }
+        else if (choiceUser === choice4){
+           alert("Ми підтримуємо і ці браузери");
+       }
+       else if(choiceUser === choice5){
+           alert("Ми підтримуємо і ці браузери");
+       }
+       else {
+           alert("Маємо надію, що ця сторінка виглядає добре!");
+       }
+
+// Завдання 2 
+/*Перепишіть код нижче використовуючи одну конструкцію switch :
+let a = +prompt('a?', '');
+if (a == 0) {
+alert( 0 );
+}
+if (a == 1) {
+alert( 1 );
+}
+if (a == 2 || a == 3) {
+alert( '2,3' );
+}
+function showMessage() {
+alert('Всім привіт!');
+}
+*/
+let a = prompt("Оберіть варіант : \r\n 1) a = 0 \r\n 2) a = 1 \r\n 3) a = 2 або a = 3 ");
+switch(a){
+    case "1":
+        alert("0");
+        break;
+
+    case "2":
+    alert("1"); ;
+        break;
+
+    case "3":
+    alert("2,3");;
+        break;
+
+    default:
+        alert("Ви ввели невірно");
+        break;
+}
+
+
+
+    </script>
+</body>
+
+</html>
